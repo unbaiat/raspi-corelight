@@ -323,7 +323,7 @@ updateAtHome () {
 }
 
 wanIP () {
-host myip.opendns.com resolver1.opendns.com | grep "myip.opendns.com has" | awk '{print $4}'
+dig +short @1.1.1.1 ch txt whoami.cloudflare | tr -d \"
 }
 
 licensed () {
